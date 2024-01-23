@@ -1,113 +1,67 @@
 body {
-  margin: 0;
-  background-color:#f8f8f8;
-  cursor:default;
 
-  /* font-family: Pixelify Sans, sans-serif; */
-  /* font-family: Indie Flower, cursive;     */
-  /* font-family: 'Bebas Neue', sans-serif;  */
-  /* font-family: 'Amatic SC', sans-serif; */
+  /*font-family: Pixelify Sans, sans-serif; 
+   font-family: Indie Flower, cursive;   
+   font-family: 'Bebas Neue', sans-serif;  
+   font-family: 'Amatic SC', sans-serif; 
 }
 
  /* NOTE : Available Fonts are 'Pixelify Sans', 'Indie Flower','Bebas Neue','Amatic SC' */
 
-#navbar {
-  background-color:#3e3e3e;
-  position: fixed;
-  bottom:0;
-  width:auto;
-  display: block;
-  transition: bottom 0.4s;
-  border-radius: 12px;
-  margin: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-width: 2px;
-  border-color: transparent	;
-  border-style: solid;
-  cursor: pointer;
+.container{
+	padding: 2rem;	
 }
-#navbar:hover{
-	border-color:whitesmoke;
-	cursor: pointer;
-}
-
-#navbar a {
-  float:left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 20px;
-  border-radius:10px;
-  background-color:#3e3e3e;
-  font-family:Amatic SC;
-  letter-spacing: 5px;
-  cursor: pointer;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-  cursor: pointer;
-}
-
-.enter{
-
-  margin: 20px;
-  height:900px;
-  width:auto;
-  background-color:whitesmoke;
-  font-family: Amatic SC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  font-size: 90px;
-  color:#272927;
-  /*Top*/
-  border-top-color: black;
-  border-top-style: solid;
-  border-top-width: 3px;
-  /*bottom*/
-  border-bottom-color: black;
-  border-bottom-style:dotted;
-  border-bottom-width: 3px;
-  /*left*/
-  border-left-color: black;
-  border-left-style: dashed;
-  border-left-width: 3px;
-  /*right*/
-  border-right-color: black;
-  border-right-style: dashed;
-  border-right-width: 3px;
-}
-.enter_text{
-	margin: 100px;
-}
-.enter_text:hover{
-	cursor:no-drop;
+.slider-wrapper{
+	position: relative;
+	max-width: 90rem;
+	margin: 0 auto;
 
 }
-.follow1{
-  margin: 20px;
-  height:900px;
-  font-family: Amatic SC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  font-size: 90px;
-  color: whitesmoke;
-  background-image: url("back1.png");
-  mask-size:100px ;
+.slider{
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow:hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 1rem;
 }
-.button_name{
-	font-size: 80px;
-	font-family: Amatic SC;
-	background-color:#272927;
-	text-shadow: 2px 2px 4px #000000;
-	color: whitesmoke;
-	border-radius: 20px;
+.slider img{
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
 }
+.slider-nav{
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.slider-nav a{
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity:0.75;
+	transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+	opacity: 1;
+
+}
+
+/* NOTE : The following code is where it is tailored to Phones (600px-MAX.) */
+
+
+
+/*
+
+@media screen and (max-width: 600px)
+{
+   **Program Here for phones**
+}
+
+*/
