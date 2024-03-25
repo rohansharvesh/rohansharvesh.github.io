@@ -69,12 +69,13 @@ opacity: 75%;
 	width: 0.75rem;
 	height: 0.75rem;
 	border-radius: 50%;
-	background-color:white;
+	background-color: #fff;
 	opacity:0.75;
 	transition: opacity ease 250ms;
 }
 .slider-nav a:hover{
 	opacity: 1;
+	background-color:#581845 ;
 
 }
 
