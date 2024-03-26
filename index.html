@@ -14,39 +14,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-</head>
+<title>ShackHolmes</title>
+<script src="https://kit.fontawesome.com/94c59cbb9b.js" crossorigin="anonymous"></script>
 
-<script>
+<script type="text/javascript">
+  
+  function light() {
+    document.getElementById("one").classList.toggle("change");
+  }
+
+    function opa1() {
+    document.getElementById("two").classList.toggle("opacityc");
+  }
+
+  function opa2() {
+    document.getElementById("three").classList.toggle("opacityc");
+  }
+
 
 </script>
+</head>
 
-<body>  
+<body>
+  <div class="box3" id="two">
+    <a>Shack Holmes</a>
+  </div>
+  <div class="box" id="one">
+    <a>Coming Soon, </a>
+    <a>In progrmming process...!!!</a>
+  </div>
+  <div class="buttonbox">
+    <button class="button" onclick="light(); opa1(); opa2()"><i class="fa-solid fa-record-vinyl"></i> &nbsp;Light it up</button>
+  </div>
+    <div class="box2" id="three">
+    <a>By Rohan Sharvesh</a>
+  </div>
 
-<div class="boxy">
-  <img src="news_paper.jpg" class="news">
-</div>
-
-<video autoplay muted class="vds">
-  <source src="mnts.mp4">
-</video>
-
-<section class="container">
-   <div class="slider-wrapper">
-   <div class="slider">
-      <img src="1.JPG"       id="slide-1">
-      <img src="12.jpg"     id="slide-2">
-      <img src="123.jpg"   id="slide-3">
-      <img src="1234.png"    id="slide-4">
-   </div>
-   <div class="slider-nav">
-    <a href="#slide-1"></a>
-    <a href="#slide-2"></a>
-    <a href="#slide-3"></a>
-    <a href="#slide-4"></a>
-   </div>
-   </div>
-</section>
 
 
 </body>
+
+
 </html>
