@@ -115,3 +115,47 @@ cursor: pointer;
 	transition: letter-spacing 15s;
 	letter-spacing: 2rem;
 }
+@media (max-width: 1200px) {
+    .box, .box2, .box3 {
+        font-size: 2.5rem;
+    }
+
+    .box3 {
+        font-size: 4rem;
+    }
+
+    .button {
+        width: 30%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .box, .box2, .box3 {
+        font-size: 2rem;
+    }
+
+    .box3 {
+        font-size: 3rem;
+    }
+
+    .button {
+        width: 40%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .box, .box2, .box3 {
+        font-size: 1.5rem;
+    }
+
+    .box3 {
+        font-size: 2.5rem;
+    }
+
+    .button {
+        width: 60%;
+        font-size: 1rem;
+    }
+}
