@@ -12,10 +12,17 @@ body {
 	font-family:unset;
 
 }
+.test:hover{
+	cursor:pointer;
+}
 .test2{
 	text-align: center;
 	font-size: 3rem;
 	font-family:unset;
+}
+.test2:hover{
+	font-weight: bold;
+	cursor:not-allowed;
 }
 .index{
 	text-align: center;
@@ -35,8 +42,34 @@ body {
 	padding-left: 20%;
 	padding-right: 20%;
 }
-.pdf{
-	border-radius: 40px;
+
+/* Styles for phones */
+@media only screen and (max-width: 767px) {
+    .pdf {
+        border-radius: 40px;
+        width: 900px;
+        height: 900px;
+    }
 }
+
+/* Styles for tablets */
+@media only screen and (max-width: 1024px) {
+    .pdf {
+        border-radius: 40px;
+        width: 80%;
+        height: 90vh; /* Example height for tablets */
+    }
+}
+
+/* Default styles for laptops and larger screens */
+.pdf {
+    border-radius: 40px;
+    width: 80%;
+    height: 100%;
+}
+
+}
+
+
 
 
