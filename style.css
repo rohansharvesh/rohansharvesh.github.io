@@ -5,25 +5,6 @@ body {
 .links{
 	text-decoration: none;
 }
-
-.test{
-	text-align: center;
-	font-size: 4.5rem;
-	font-family:unset;
-
-}
-.test:hover{
-	cursor:pointer;
-}
-.test2{
-	text-align: center;
-	font-size: 3rem;
-	font-family:unset;
-}
-.test2:hover{
-	font-weight: bold;
-	cursor:not-allowed;
-}
 .index{
 	text-align: center;
 	font-size: 2rem;
@@ -34,6 +15,7 @@ body {
 	cursor: pointer;
 	font-weight: bold;
 }
+
 .info{
 	text-align: center;
 	font-size: 1.5rem;
@@ -43,33 +25,77 @@ body {
 	padding-right: 20%;
 }
 
-/* Styles for phones */
-@media only screen and (max-width: 767px) {
+/* Styles for phones*/
+@media only screen and (max-width: 599px) {
     .pdf {
         border-radius: 40px;
-        width: 900px;
-        height: 900px;
+        width: 90%;
+        height: 90vh;
+    }
+    .test,.test2 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: unset;
+        color: black;
+    }
+    .test,.test2:hover {
+        cursor: pointer;
     }
 }
 
-/* Styles for tablets */
-@media only screen and (max-width: 1024px) {
+/* Styles for tablets (600px to 899px) */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
     .pdf {
         border-radius: 40px;
         width: 80%;
-        height: 90vh; /* Example height for tablets */
+        height: 90vh;
+    }
+    .test,.test2 {
+        text-align: center;
+        font-size: 4.5rem;
+        font-family: unset;
+        color:black;
+    }
+    .test,.test2:hover {
+        cursor: pointer;
     }
 }
 
-/* Default styles for laptops and larger screens */
-.pdf {
-    border-radius: 40px;
-    width: 80%;
-    height: 100%;
+/* Styles for laptops and desktops (900px to 1199px) */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+    .pdf {
+        border-radius: 40px;
+        width: 80%;
+        height: 100%;
+    }
+    .test,.test2 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: unset;
+        color:black;
+    }
+    .test,.test2:hover {
+        cursor: pointer;
+    }
 }
 
+/* Styles for larger screens like projectors or TVs */
+@media only screen and (min-width: 1200px) {
+    .pdf {
+        border-radius: 40px;
+        width: 70%;
+        height: 90vh;
+    }
+    .test,.test2 {
+        text-align: center;
+        font-size: 5rem;
+        font-family: unset;
+        color:black;
+    }
+    .test,.test2:hover {
+        cursor: pointer;
+    }
 }
-
 
 
 
