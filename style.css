@@ -1,114 +1,160 @@
-
 body {
-	margin: 2;
+	margin: 0;
+  /*font-family: Pixelify Sans, sans-serif; 
+   font-family: Indie Flower, cursive;   
+   font-family: 'Bebas Neue', sans-serif;  
+   font-family: 'Amatic SC', sans-serif; */
+   background-color: black;
+
+
 }
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-.back{
-	text-decoration: none;
-	font-size:1rem;
-	color: black;
-}
-.back:hover{
-	font-weight: bold;
-}
-.links{
-	text-decoration: none;
-}
-.index{
+
+.box{
+	width:100%;
+	height:10rem;
+	align-content:center;
+	color: whitesmoke;
 	text-align: center;
-	font-size: 2rem;
-	font-family:unset;
-	color: black;
-}
-.index:hover{
+	font-size: 3rem;
+	font-family: Pixelify Sans, sans-serif;
+	position:relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	cursor: pointer;
-	font-weight: bold;
 }
-
-.info{
+.box2{
+	width:100%;
+	height:10rem;
+	align-content:center;
+	color: whitesmoke;
 	text-align: center;
-	font-size: 1.5rem;
-	font-family:unset;
+	font-size: 3rem;
+	font-family: Pixelify Sans, sans-serif;
+	position:relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color:whitesmoke;
+	cursor: pointer;
+	opacity: 0;
+}
+/* up is rohan sharvesh */
+.box2:hover{
+	color: whitesmoke;
+	transition: opacity ease 2500ms;
+	opacity: 1;
+	font-size:3rem;
+}
+.box3{
+	width:auto;
+	height:10rem;
+	align-content:center;
+	color: whitesmoke;
+	text-align: center;
+	font-size: 5rem;
+	font-family: Pixelify Sans, sans-serif;
+	position:relative;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color:whitesmoke;
+	cursor: pointer;
+	opacity: 1;
+}
+.box3:hover{
+	color: whitesmoke;
+	transition:font-size 3s;
+	opacity: 100;
+	font-size:18rem;
+}
+/*up is shackholmes*/
+.buttonbox{
+	width:100%;
+	height:10rem;
+	align-content:center;
+	text-align: center;
+	position: relative;
+	top: 5%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.button{
+	height:auto;
+	width:20%;
+	background-color: transparent;
+	color: whitesmoke;
+	border-style: solid;
+	border-color: transparent;
+	border-radius:10rem;
+	border-width: 5%;
+	font-family: Pixelify Sans, sans-serif;
+	font-size: 2rem;
+
+}
+.button:hover{
+	
 	color: black;
-	padding-left: 20%;
-	padding-right: 20%;
+	background-color: #fff;
+    -webkit-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+cursor: pointer;
 }
 
-/* Styles for phones*/
-@media only screen and (max-width: 599px) {
-    .pdf {
-        border-radius: 40px;
-        width: 90%;
-        height: 90vh;
+.change{
+	background-color: white;
+	color: black;
+	transition: letter-spacing 5s;
+	letter-spacing: 1rem;
+
+}
+.opacityc{
+	opacity: 1;
+	transition: letter-spacing 15s;
+	letter-spacing: 2rem;
+}
+@media (max-width: 1200px) {
+    .box, .box2, .box3 {
+        font-size: 2.5rem;
     }
-    .test,.test2 {
-        text-align: center;
+
+    .box3 {
+        font-size: 4rem;
+    }
+
+    .button {
+        width: 30%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .box, .box2, .box3 {
         font-size: 2rem;
-        font-family: unset;
-        color: black;
     }
-    .test,.test2:hover {
-        cursor: pointer;
+
+    .box3 {
+        font-size: 3rem;
+    }
+
+    .button {
+        width: 40%;
+        font-size: 1.2rem;
     }
 }
 
-/* Styles for tablets (600px to 899px) */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-    .pdf {
-        border-radius: 40px;
-        width: 80%;
-        height: 90vh;
+@media (max-width: 480px) {
+    .box, .box2, .box3 {
+        font-size: 1.5rem;
     }
-    .test,.test2 {
-        text-align: center;
-        font-size: 4.5rem;
-        font-family: unset;
-        color:black;
+
+    .box3 {
+        font-size: 2.5rem;
     }
-    .test,.test2:hover {
-        cursor: pointer;
+
+    .button {
+        width: 60%;
+        font-size: 1rem;
     }
 }
-
-/* Styles for laptops and desktops (900px to 1199px) */
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-    .pdf {
-        border-radius: 40px;
-        width: 80%;
-        height: 100%;
-    }
-    .test,.test2 {
-        text-align: center;
-        font-size: 2rem;
-        font-family: unset;
-        color:black;
-    }
-    .test,.test2:hover {
-        cursor: pointer;
-    }
-}
-
-/* Styles for larger screens like projectors or TVs */
-@media only screen and (min-width: 1200px) {
-    .pdf {
-        border-radius: 40px;
-        width: 70%;
-        height: 90vh;
-    }
-    .test,.test2 {
-        text-align: center;
-        font-size: 5rem;
-        font-family: unset;
-        color:black;
-    }
-    .test,.test2:hover {
-        cursor: pointer;
-    }
-}
-
-
-
