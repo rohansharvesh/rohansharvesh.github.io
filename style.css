@@ -2,13 +2,33 @@ body {
 	margin: 0;
   /*font-family: Pixelify Sans, sans-serif; 
    font-family: Indie Flower, cursive;   
-   font-family: 'Bebas Neue', sans-serif;  
-   font-family: 'Amatic SC', sans-serif; */
+   font-family: 'Bebas Neue', sans-serif; */ 
+   font-family: 'Amatic SC', sans-serif;
    background-color: black;
 
 
 }
 
+.hey{
+	color: whitesmoke;
+	background-color: transparent;
+	border-color: whitesmoke;
+	border-style: solid;
+	border-radius: 20px;
+	width:auto;
+	text-align: center;
+	text-decoration:none;
+	font-family:Amatic SC ;
+	width: 150px;
+	height: auto;
+	font-size: 35px;
+}
+.hey:hover{
+	font-size:36px ;
+	background-color: whitesmoke;
+	cursor:pointer ;
+	color: black;
+}
 .box{
 	width:100%;
 	height:10rem;
@@ -143,7 +163,6 @@ cursor: pointer;
         font-size: 1.2rem;
     }
 }
-
 @media (max-width: 480px) {
     .box, .box2, .box3 {
         font-size: 1.5rem;
