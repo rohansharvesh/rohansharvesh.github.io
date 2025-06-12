@@ -2,7 +2,7 @@
 const navLinks = document.querySelectorAll('.glass-navbar a');
 const sections = document.querySelectorAll('.section');
 
-
+//update check
 
 function showSection(sectionId) {
     sections.forEach(sec => {
