@@ -603,29 +603,7 @@
             text-shadow: 0 0 2px #00ff00;
         }
 
-        /* Home Hint */
-        .home-hint {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            color: #00ff00;
-            font-family: 'VT323', monospace;
-            font-size: 1rem;
-            opacity: 0;
-            z-index: 1001;
-            pointer-events: none;
-            user-select: none;
-            text-shadow: 0 0 4px #00ff00;
-            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .home-hint.fade-in {
-            opacity: 0.7;
-        }
-        .home-hint.fade-out {
-            opacity: 0;
-        }
-
-        /* Backdoor Overlay */
+            /* Backdoor Overlay */
         .backdoor-overlay {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
@@ -731,9 +709,6 @@
             <audio id="audio-player"></audio>
         </div>
     </nav>
-
-    <!-- Home Hint -->
-    <div class="home-hint">Tip : Try clicking on the home button again to see quotes...</div>
 
     <!-- Backdoor Overlay -->
     <div id="backdoor-overlay" class="backdoor-overlay" style="display: none;">
@@ -1184,43 +1159,6 @@
             audioPlayer.addEventListener('loadedmetadata', () => {
                 durationDisplay.textContent = formatTime(audioPlayer.duration);
             });
-        });
-
-        // Home Hint Logic
-        let homeHintShown = false;
-        let homeHintRemoved = false;
-        const homeHint = document.querySelector('.home-hint');
-        const userInput = document.getElementById('user-input');
-        if (userInput && homeHint) {
-            userInput.addEventListener('input', function onFirstInput() {
-                if (!homeHintShown && !homeHintRemoved) {
-                    homeHint.classList.add('fade-in');
-                    homeHint.classList.remove('fade-out');
-                    homeHintShown = true;
-                }
-            }, { once: true });
-        }
-        // Hide and never show the hint after visiting the quotes page
-        function removeHomeHintForever() {
-            if (homeHint && !homeHintRemoved) {
-                homeHint.classList.remove('fade-in');
-                homeHint.classList.add('fade-out');
-                homeHintRemoved = true;
-            }
-        }
-        // Listen for navigation to the welcome-section (quotes page) via Home button
-        const homeBtn = document.getElementById('home-btn');
-        if (homeBtn) {
-            homeBtn.addEventListener('click', function() {
-                removeHomeHintForever();
-            });
-        }
-        // Also handle keyboard navigation to quotes page
-        document.addEventListener('keydown', function(e) {
-            // '2' or 'ArrowRight' for Dream, '1' or 'ArrowLeft' for Home
-            if ((e.key === '2' || e.key === 'ArrowRight' || e.key === '1' || e.key === 'ArrowLeft')) {
-                removeHomeHintForever();
-            }
         });
 
         // Add Backdoor button next to navbar
