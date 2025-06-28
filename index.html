@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo.png" type="image/x-icon">
@@ -466,132 +466,110 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-bottom: 100px; /* Add space for the fixed navigation */
+            }
+
             .home-section {
-                padding: 20px;
+                padding: 15px;
             }
             
             .home-header {
-                top: 20px;
-                left: 20px;
-                font-size: 2rem;
+                top: 15px;
+                left: 15px;
+                font-size: 1.8rem;
             }
             
             .terminal-window {
-                margin-top: 0;
-                padding: 20px;
-                max-height: calc(100vh - 160px);
+                margin-top: 60px; /* Add space below the header */
+                padding: 15px;
+                max-height: calc(100vh - 200px);
             }
             
             .terminal-content {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .terminal-title {
                 font-size: 1rem;
             }
             
             .welcome-section h2,
             .dream-section h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-section h2 {
-                font-size: 2.2rem;
-            }
-            
-            .navigation {
-                flex-direction: column;
-                gap: 15px;
-                border-radius: 15px;
-                padding: 15px;
-                width: calc(100% - 40px);
-                max-width: 400px;
-            }
-            
-            .nav-buttons {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .music-player {
-                border-left: none;
-                border-top: 1px solid rgba(0, 255, 0, 0.2);
-                padding-left: 0;
-                padding-top: 15px;
-                margin-left: 0;
-                flex-direction: column;
-                width: 100%;
-                gap: 10px;
-            }
-            
-            .player-controls {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .progress-container {
-                width: 100%;
-            }
-            
-            .music-player select {
-                width: 100%;
-            }
-            
-            .music-player .controls {
-                justify-content: center;
-                width: 100%;
-            }
-            
-            .music-player .track-info {
-                text-align: center;
-            }
-            
-            .ascii-art {
-                font-size: 0.8rem;
+                font-size: 1.8rem;
             }
             
             .dream-content {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .contact-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .navigation {
+                bottom: 20px;
+                padding: 8px 15px;
+                gap: 10px;
+                width: auto;
+                justify-content: center;
+            }
+
+            .nav-button {
+                font-size: 0.9rem;
+                padding: 6px 15px;
+                height: 34px;
+                min-width: 70px;
+            }
+
+            /* Hide music player on mobile */
+            .music-player {
+                display: none;
+            }
+
+            /* Adjust input area for mobile */
+            .input-area {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+
+            .prompt {
+                margin-bottom: 8px;
+            }
+
+            .user-input {
+                font-size: 0.9rem;
+            }
+
+            /* Hide elements that take up unnecessary space on mobile */
+            .nav-quote,
+            .ascii-art {
+                display: none;
             }
         }
 
-        @media (max-width: 480px) {
+        /* Additional mobile adjustments for very small screens */
+        @media (max-width: 380px) {
             .home-header {
                 font-size: 1.5rem;
             }
-            
-            .terminal-window {
-                margin-top: 0;
-                padding: 15px;
-            }
-            
-            .terminal-content {
-                font-size: 0.9rem;
-            }
-            
-            .navigation {
-                bottom: 15px;
-                gap: 8px;
-                padding: 8px 12px;
-                border-radius: 30px;
-            }
-            
-            .nav-button {
-                font-size: 0.9rem;
-                padding: 5px 12px;
-                min-width: 60px;
-                height: 32px;
-                border-radius: 20px;
-            }
-        }
 
-        @media (max-width: 360px) {
-            .navigation {
-                flex-direction: column;
-                align-items: center;
-                gap: 6px;
-                padding: 8px;
-                border-radius: 20px;
+            .terminal-window {
+                margin-top: 50px;
+                padding: 12px;
             }
-            
+
+            .navigation {
+                padding: 6px 12px;
+            }
+
             .nav-button {
-                width: 80px;
+                font-size: 0.85rem;
+                padding: 5px 12px;
+                height: 30px;
+                min-width: 60px;
             }
         }
 
